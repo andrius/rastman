@@ -34,7 +34,7 @@
 #     
 #     rastman = Rastman::Manager.new("myuser", "secret")
 #     
-#     rastman.add_event_hook(:event) { |evt| puts "Event received: [#{evt.inspect}]"
+#     rastman.add_event_hook(:event) { |evt| puts "Event received: [#{evt.inspect}]" }
 #     
 #     rastman.connect
 #     
@@ -52,3 +52,15 @@
 #     
 #     rastman.logoff
 #
+#
+#
+#
+# Modification made by Manopulus (quickfixe):
+#
+# command parse_line in module Parser changed:
+# yield(:unknown, "UNKNOWN") changed to yield(:unknown, line.chomp)
+# this let's to get result from commands like:
+# rastman.command :action => 'command', :command => 'konference list'
+# or
+# rastman.command :action => 'command', :command => 'sip show peers'
+
