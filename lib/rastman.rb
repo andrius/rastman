@@ -64,7 +64,8 @@ module Rastman
         @buffer = ""
       else
         if @buffer[-2..-1] == "\r\n"
-          yield(:unknown, "UNKNOWN")
+          # yield(:unknown, "UNKNOWN")
+          yield(:unknown, line.chomp)
           @buffer = ""
         end
       end
