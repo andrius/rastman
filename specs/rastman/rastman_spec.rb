@@ -182,6 +182,7 @@ describe "When connected to Asterisk, a rastman instance" do
   end
   
   it "should allow to send a command within an event hook" do
+    pending
     action =    { :event => "Newcallerid", :privilege => "call,all",
                   :timestamp => "1213361083.812935", :channel => "SIP/sns-gk1-086cf000",
                   :callerid => "180012345", :calleridname => "<Unknown>",
@@ -246,6 +247,7 @@ describe "Events generated using the UserEvent command in Asterisk" do
   end
 
   it "should have the same format if they are sent from Asterisk V1.0.x or V1.4.x" do
+    pending
     evt_1_0 = {
       :event => "UserEventEvtStartScript",
       :variables => "PORT: SIP/10.1.2.98-b78008d8|ANI: lajoo|DNIS: 13002226666"
@@ -266,6 +268,7 @@ describe "Events generated using the UserEvent command in Asterisk" do
   end
   
   it "should set to empty string any empty event variable" do
+    pending
     evt_1_0 = {
       :event => "UserEventEvtStartScript",
       :variables => "PORT: SIP/10.1.2.98-b78008d8|ANI: lajoo|empty: |DNIS: 13002226666|entry:"
