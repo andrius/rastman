@@ -9,7 +9,7 @@ RDOC_OPTS = ["--quiet", "--title", "Rastman Documentation",
 
 Gem::Specification.new do |s|
   s.name = "rastman"
-  s.version = "0.1.6"
+  s.version = "0.1.7"
   s.platform = Gem::Platform::RUBY
   s.has_rdoc = true
   s.rdoc_options += RDOC_OPTS
