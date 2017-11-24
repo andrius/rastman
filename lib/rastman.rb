@@ -109,8 +109,7 @@ module Rastman
       @eventmask = opts[:eventmask] || 'on'
       @reconnect_timeout = opts[:reconnect_timeout] || 1
       @connected, @hooks = false, {}
-      @conn_lock = nil
-      @conn_lock.extend(MonitorMixin)
+      @conn_lock = Monitor.new
       add_event_hook(:reconnect) { event_reconnect }
       connect if opts[:connect]
     end
